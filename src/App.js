@@ -6,6 +6,8 @@ import Dashboard from "./pages/dashboard";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import { Route, Routes } from "react-router-dom";
+import Team from "./pages/team";
+import Contacts from "./pages/contacts";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -20,6 +22,8 @@ function App() {
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
               <Route path="/" element={<Dashboard />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/contacts" element={<Contacts />} />
             </Routes>
           </main>
         </div>
